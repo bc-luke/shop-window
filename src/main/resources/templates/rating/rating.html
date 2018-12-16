@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en"xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="/style.css">
+
+    <title>Shop Window</title>
+</head>
+<body>
+
+<header th:replace="common/header" />
+
+<div class="panel">
+    <p th:if="${good > 0}" class="result result-good">No</p>
+    <p th:if="${bad > 0}" class="result result-bad">Yes</p>
+    <p th:if="${good > 0}">Your shop design looks good!</p>
+    <p th:if="${bad > 0}">Your shop design could use some work! Get some help from an <a href="https://www.bigcommerce.com/partners/agency/">agency partner</a>.</p>
+</div>
+
+<script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="/script.js"></script>
+</body>
+</html>
